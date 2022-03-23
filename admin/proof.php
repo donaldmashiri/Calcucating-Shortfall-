@@ -22,6 +22,7 @@
                             <?php
                             $sql = "SELECT * FROM patient_requests JOIN proof_payment 
                             ON patient_requests.request_id = proof_payment.ref_no
+                                    JOIN msustaff ON patient_requests.request_id = msustaff.staff_id
                                     WHERE patient_requests.req_status1 = 'approved' ";
                             $result = $conn->query($sql);
 
@@ -46,6 +47,7 @@
                                     <div class="col-md-3 border border-1" style="width: 18rem;">
                                         <img src="../img/<?php echo $image ?>" class="card-img-top" alt="...">
                                         <div class="card-body">
+                                            <p class="font-weight-bolder">From : <?php echo $firstName ." ". $lastName; ?></p>
                                             <h5 class="card-title"><?php echo $title ?></h5>
                                             <p class="card-text">Amount requested: <?php echo $amount ?>
                                                 Amount given: <?php echo $amountgiven ?>  </p>

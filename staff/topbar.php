@@ -7,6 +7,7 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $staff_id = $row["staff_id"];
     $firstName = $row["firstName"];
+    $lastName = $row["lastName"];
 }
 ?>
 
@@ -31,8 +32,8 @@ if ($result->num_rows > 0) {
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
             <a class="nav-link" href="index.php">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <i class="fas fa-fw fa-user-alt"></i>
+                <span><?php echo $firstName ." ". $lastName ?></span></a>
         </li>
 
         <!-- Divider -->

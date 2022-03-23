@@ -30,9 +30,8 @@
                             $amount = $_POST['amount'];
                             $req_type = $_POST['req_type'];
 
-
                             $sql = "INSERT INTO patient_requests (staff_id, title, description, amount, req_type, date)
-                            VALUES ('1','{$title}', '{$description}', '{$amount}','{$req_type}',now())";
+                            VALUES ('{$_SESSION['staff_id']}','{$title}', '{$description}', '{$amount}','{$req_type}',now())";
 
                             if ($conn->query($sql) === TRUE) {
 
@@ -54,7 +53,8 @@
                             <div class="form-group">
                                 <label for="type">Form of request</label>
                                 <select name="req_type" class="form-control" id="type">
-                                    <option>Cash</option>
+                                    <option value="cash">Cash</option>
+                                    <option value="credit payment">credit payment</option>
                                 </select>
                             </div>
                             <div class="form-group">

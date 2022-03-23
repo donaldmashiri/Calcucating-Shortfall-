@@ -9,5 +9,5 @@
 </li>
 
 <li class="nav-item ">
-    <a class="nav-link collapsed " href="reports.php"><i class="fas fa-fw fa-reply"></i>Reports </a>
+    <a class="nav-link collapsed " href="../index.php"><i class="fas fa-fw fa-reply"></i>Logout </a>
 </li>

@@ -34,7 +34,8 @@
                             </thead>
                             <tbody>
 <?php
-$sql = "SELECT * FROM patient_requests WHERE staff_id = '{$_SESSION['staff_id']}'";
+
+$sql = "SELECT * FROM patient_requests WHERE staff_id = '{$_SESSION['staff_id']}'  ORDER BY request_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -68,7 +69,6 @@ if ($result->num_rows > 0) {
                                         echo "<p class='text-info'> $req_status1 </p>";
                                     }
                                     ?>
-<!--                                    <p class="text-danger">--><?php //echo $req_status1 ?><!--</p>-->
                                 </td>
                                 <td>
                                     <a href="view.php?view=<?php echo $request_id ?>" class="btn btn-info btn-sm">view</a>

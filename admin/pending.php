@@ -70,7 +70,7 @@ if (isset($_GET['approve'])) {
                         <div class="row">
                             <?php
                             $sql = "SELECT * FROM patient_requests JOIN msustaff ON patient_requests.staff_id = msustaff.staff_id
-                                        WHERE req_status1 != 'approved'";
+                                        WHERE req_status1 = 'pending'";
                             $result = $conn->query($sql);
 
                             if ($result->num_rows > 0) {
@@ -133,14 +133,15 @@ if (isset($_GET['approve'])) {
                                                 <div class="mb-2 ng-binding bg-light">
                                                     <form action="" method="get">
                                                         <input type="hidden" name="req_id" value="<?php echo $request_id ?>">
-                                                        <select class="form-control" name="amountgiven" id="">
-                                                            <option value="">select amount to be given</option>
-                                                            <option value="50">50</option>
-                                                            <option value="100">100</option>
-                                                            <option value="200">200</option>
-                                                            <option value="550">550</option>
-                                                            <option value="all">All</option>
-                                                        </select>
+                                                        <input type="number" name="amountgiven" class="form-control" placeholder="Enter amount to be given">
+<!--                                                        <select class="form-control" name="amountgiven" id="">-->
+<!--                                                            <option value="">select amount to be given</option>-->
+<!--                                                            <option value="50">50</option>-->
+<!--                                                            <option value="100">100</option>-->
+<!--                                                            <option value="200">200</option>-->
+<!--                                                            <option value="550">550</option>-->
+<!--                                                            <option value="all">All</option>-->
+<!--                                                        </select>-->
                                                         <button name="approve" type="submit" class="btn btn-success btn-sm mt-2">approve</button>
                                                         <button name="reject" type="submit" class="btn btn-danger btn-sm mt-2">Reject</button>
 <!--                                                        <a href="pass_request.php?action=decline&req_id=--><?//= $request_id ?><!--" class="mt-2 btn btn-danger btn-sm">reject </a>-->
@@ -158,7 +159,7 @@ if (isset($_GET['approve'])) {
                                         <?php
                                 }
                             } else {
-                                echo "0 results";
+                                echo "<p class='alert alert-info'>No pending request</p>";
                             }
 
 
