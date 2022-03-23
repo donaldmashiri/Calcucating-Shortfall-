@@ -29,6 +29,10 @@
                         <br>
 
                         <?php
+						
+			
+						
+						
 if(isset($_POST['submit'])) {
 
     $search = $_POST['search'];
@@ -47,27 +51,29 @@ if(isset($_POST['submit'])) {
 
     $query = "SELECT * FROM msustaff WHERE staff_id = $number";
 
-    $all_msgs = mysqli_query($conn, $query);
+			$result = mysqli_query($conn, $query);
+			$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+            $count = mysqli_num_rows($result);
 
-    if ($result->num_rows > 0) {
-        while ($row = mysqli_fetch_assoc($all_msgs)) {
+    if ($count == 1) {
             $staff_id = $row["staff_id"];
             $firstName = $row["firstName"];
             $lastName = $row["lastName"];
             $email = $row["email"];
             $department = $row["department"];
+			
 
             echo "<ul class='list-group '>
                   <li class='list-group-item bg-success text-white'>Employee verification is granted</li> 
                   <li class='list-group-item'>Staff ID :</span>  MSU00$staff_id </li> 
                   <li class='list-group-item'>Name(s) :</span>  $firstName $lastName </li> 
                </ul>";
-        }
+        
     }else{
         echo "<ul class='list-group '>
                   <li class='list-group-item bg-danger text-white'>Employee with MSU$staff_id is  not found</li> 
                </ul>";
-    }
+    }			
 }
                         ?>
 
