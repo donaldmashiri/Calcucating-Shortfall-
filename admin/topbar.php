@@ -2,11 +2,11 @@
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-            <div class="sidebar-brand-icon">
+        <a class="sidebar-brand bg-gradient-danger d-flex align-items-center justify-content-center" href="index.php">
+            <div bg-gradient-danger class="sidebar-brand-icon">
                 <!--                    <i class="fas fa-laugh-wink"></i>-->
                 <img src="../img/firstmutual.jfif" class="rounded" width="100" height="70" alt="">
             </div>
@@ -50,7 +50,7 @@
         <div id="content">
 
             <!-- Topbar -->
-            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <nav class="navbar navbar-expand navbar-light bg-danger topbar mb-4 static-top shadow">
 
                 <!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -61,16 +61,13 @@
 
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
-
-
-
                     <div class="topbar-divider d-none d-sm-block"></div>
 
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">First Mutual</span>
+                            <span class="mr-2 d-none d-lg-inline text-white-600 small">First Mutual</span>
                             <img class="img-profile rounded-circle"
                                  src="../img/firstm.png" width="50" height="50">
                         </a>

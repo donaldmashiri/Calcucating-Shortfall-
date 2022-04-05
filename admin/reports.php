@@ -15,6 +15,27 @@
                     <div
                         class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <h6 class="m-0 font-weight-bold text-primary">Reports</h6>
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="">Monthly Reports</label>
+                                <select name=""  class="form-control" id="" onchange="location = this.value;">
+                                    <option value="">Select Month</option>
+                                    <option value="month.php?month=January">January</option>
+                                    <option value="month.php?month=February">February</option>
+                                    <option value="month.php?month=March">March</option>
+                                    <option value="month.php?month=April">April</option>
+                                    <option value="month.php?month=May">May</option>
+                                    <option value="month.php?month=June">June</option>
+                                    <option value="month.php?month=July">July</option>
+                                    <option value="month.php?month=August">August</option>
+                                    <option value="month.php?month=September">September</option>
+                                    <option value="month.php?month=October">October</option>
+                                    <option value="month.php?month=November">November</option>
+                                    <option value="month.php?month=December">December</option>
+                                </select>
+
+                            </div>
+                        </form>
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
