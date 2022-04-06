@@ -21,6 +21,7 @@
                             echo $month
                             ?>
                         </h6>
+
                         <form action="" method="post">
                             <div class="form-group">
                                 <label for="">Monthly Reports</label>
@@ -163,6 +164,9 @@
 
                             </tbody>
                         </table>
+<!--                        <button onclick="window.print()">sdd</button>-->
+                        <button onclick="window.print()" class="btn btn-primary">Print</button>
+
                     </div>
                 </div>
             </div>
